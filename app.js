@@ -8,7 +8,7 @@ const cross=document.querySelector(".cross")
 search.addEventListener("click",()=>{
   if(input.value=="") return;
   console.log(input.value)
-  const URL=`http://www.omdbapi.com/?s=${input.value}&apikey=2635936b`
+  const URL=`https://www.omdbapi.com/?s=${input.value}&apikey=2635936b`
   fetch(URL)
 .then(response => response.json())
 .then(data =>{ console.log(data);
@@ -150,7 +150,7 @@ const createWholeData = (movieData)=>{
 }
 let displayNone= (e) =>{ 
   if(e.ibdm!=undefined){
-   fetch(`http://www.omdbapi.com/?i=${e.ibdm}&apikey=2635936b`)
+   fetch(`https://www.omdbapi.com/?i=${e.ibdm}&apikey=2635936b`)
    .then(response => response.json())
    .then(data  =>{ console.log(data)
   createWholeData(data)})
